@@ -1,0 +1,8 @@
+# vscode
+.vscode
+
+# bin directory
+bin
+
+# test input file
+src/00.in
