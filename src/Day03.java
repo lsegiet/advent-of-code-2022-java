@@ -40,6 +40,7 @@ public class Day03 {
                 }
             }
         }
+        // part 1:
         print(sum);
         // part 2:
         sum = 0;

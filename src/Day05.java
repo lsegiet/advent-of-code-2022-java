@@ -82,15 +82,20 @@ public class Day05 {
             }
 
         }
+        // part 1:
         String part1 = "";
         for (int i = 1; i <= stacksPart1.size(); i++) {
             part1 = part1 + Character.toString(stacksPart1.get(i).peek());
         }
+        // part 1:
         print(part1);
+
+        // part 2:
         String part2 = "";
         for (int i = 1; i <= stacksPart2.size(); i++) {
             part2 = part2 + Character.toString(stacksPart2.get(i).peek());
         }
+        // part 2:
         print(part2);
     }
 }

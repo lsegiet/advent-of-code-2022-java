@@ -74,7 +74,9 @@ public class Day02 {
                 score2 += signToPoints.get(me2);
             }
         }
+        // part 1:
         print(score1);
+        // part 2:
         print(score2);
         scanner.close();
     }
