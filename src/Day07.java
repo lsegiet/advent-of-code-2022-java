@@ -42,10 +42,9 @@ public class Day07 {
                 for (Directory dir : children.values()) {
                     sum += dir.getSize();
                 }
-                return sum;
-            } else {
-                return this.size;
+                this.size = sum;
             }
+            return this.size;
         }
     }
 
