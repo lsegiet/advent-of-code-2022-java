@@ -2,11 +2,9 @@ import java.io.File;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.Set;
 
 public class Day11 {
     public static void print (Object object) {
@@ -21,9 +19,9 @@ public class Day11 {
             OLD,
             CONST
         }
-        Operator operator;
-        Operant operant;
-        long constant;
+        private Operator operator;
+        private Operant operant;
+        private long constant;
         Operation(char operator, String what) {
             this.operator = operator == '+' ? Operator.PLUS : Operator.MULTIPLY; 
             this.operant = what.equals("old") ? Operant.OLD : Operant.CONST;
@@ -35,13 +33,13 @@ public class Day11 {
         }
     }
     static class Monkey {
-        final Queue<Long> items = new LinkedList<>();
-        final Operation operation;
-        final int divisibility;
-        final int indIfTrue;
-        final int indIfFalse;
-        int inspected;
-        int divisibilitiesMultiplied = 1;
+        private final Queue<Long> items = new LinkedList<>();
+        private final Operation operation;
+        private final int divisibility;
+        private final int indIfTrue;
+        private final int indIfFalse;
+        private int inspected;
+        private int divisibilitiesMultiplied = 1;
 
         Monkey(List<String> lines) {
             String tempItems [] = lines.get(1).substring(18).split(", ");
@@ -55,7 +53,7 @@ public class Day11 {
             inspected = 0;
         }
 
-        void addItem(long value) {
+        private void addItem(long value) {
             items.add(value);
         }
 
